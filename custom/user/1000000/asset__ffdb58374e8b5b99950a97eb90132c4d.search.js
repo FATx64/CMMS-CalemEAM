@@ -1,0 +1,2 @@
+var search={CalemSearchInfo: {id: 'ffdb58374e8b5b99950a97eb90132c4d', name: 'engine', table: 'asset', shared: 0, axoId: '1000000', search: {asset: {CalemTableSearchInfo: {table: 'asset', search: {note: {CalemDbExpr: {field: {CalemDbField: {table: 'asset', field: 'note'}}, op: 'LIKE', value: {CalemDbString: 'engine'}}}}}}}}};
+CalemSearchDef.addSearch('asset', '1000000', 'ffdb58374e8b5b99950a97eb90132c4d', search);

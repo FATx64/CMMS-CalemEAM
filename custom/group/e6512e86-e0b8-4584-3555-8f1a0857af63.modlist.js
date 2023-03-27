@@ -1,0 +1,2 @@
+/** Calem JS package */
+CalemModListCustomDef['e6512e86-e0b8-4584-3555-8f1a0857af63']= {CalemModListCustomInfo: {acl: {modCalemAdmin: 1}, layout: ['modCalemDash', 'modCalemWo', 'modCalemSched', 'modCalemAsset', 'modCalemPm', 'modCalemIn', 'modCalemReq', 'modCalemPo', 'modCalemContract', 'modCalemVendor', 'modCalemRcm', 'modCalemProject', 'modCalemDoc', 'modCalemContact', 'modCalemBudget', 'modCalemInspection', 'modCalemTraining']}};

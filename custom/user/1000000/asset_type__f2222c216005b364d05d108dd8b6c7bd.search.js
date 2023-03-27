@@ -1,0 +1,2 @@
+var search={CalemSearchInfo: {id: 'f2222c216005b364d05d108dd8b6c7bd', name: 'SWITCH', table: 'asset_type', shared: 0, axoId: '1000000', search: {asset_type: {CalemTableSearchInfo: {table: 'asset_type', search: {type: {CalemDbExpr: {field: {CalemDbField: {table: 'asset_type', field: 'type'}}, op: 'LIKE', value: {CalemDbString: 'SWITCH'}}}}}}}}};
+CalemSearchDef.addSearch('asset_type', '1000000', 'f2222c216005b364d05d108dd8b6c7bd', search);
