@@ -38970,3 +38970,434 @@
  DEBUG CalemPDOStatement - Query time:0.0002, the query=SELECT count(*) FROM asset_downtime WHERE asset_downtime.wo_id = 'c558b323-42c2-1ba4-8977-1ca6c8e98d21', params=NULL
  DEBUG CalemPDOStatement - Query time:0.0002, the query=SELECT count(*) FROM wo_comment WHERE wo_comment.wo_id = 'c558b323-42c2-1ba4-8977-1ca6c8e98d21', params=NULL
  DEBUG CalemSoapRequest - Zip contents from 2234 to 302
+ INFO  CalemSoapService - acceptedEncoding=gzip, deflate, br, Received a post request=<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"><soap:Header><format>js</format><CALEM_SID>0b9c4691-4464-e814-817f-3d7832d810bb</CALEM_SID></soap:Header><soap:Body><BulkFetch xmlns="urn:CalemosSoapService"><bulkfetch><sched_user><table>sched_user</table><type>GET</type><sql>SELECT sched_user.* FROM sched_user   ORDER BY sched_date DESC  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM sched_user </countSql><localTime>2023-03-27 08:11:11</localTime></sched_user><recycle_bin_users><table>users</table><type>DELETED</type><sql>SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time &gt;= '2023-03-27 01:01:48' AND recycle_bin.table_name = 'users')</sql><localTime>2023-03-27 08:11:11</localTime></recycle_bin_users><users><table>users</table><type>GET</type><sql>SELECT users.* FROM users WHERE users.modified_time &gt;= '2023-03-27 01:01:48'  ORDER BY username ASC</sql><countSql>SELECT count(*) FROM users WHERE users.modified_time &gt;= '2023-03-27 01:01:48'</countSql><localTime>2023-03-27 08:11:11</localTime></users></bulkfetch></BulkFetch></soap:Body></soap:Envelope>
+ DEBUG CalemSoapService - reqHeader=2, params=1
+ INFO  MysqlHandler - calem db connection: user=admin, password=***, , connection=mysql:host=localhost;dbname=pheok_maintenance, persistent connection=Array
+ DEBUG CalemSoapRequest - Invoking the BulkFetch, param=stdClass::__set_state(array(
+   'sched_user' => 
+  stdClass::__set_state(array(
+     'table' => 'sched_user',
+     'type' => 'GET',
+     'sql' => 'SELECT sched_user.* FROM sched_user   ORDER BY sched_date DESC  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM sched_user ',
+     'localTime' => '2023-03-27 08:11:11',
+  )),
+   'recycle_bin_users' => 
+  stdClass::__set_state(array(
+     'table' => 'users',
+     'type' => 'DELETED',
+     'sql' => 'SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= \'2023-03-27 01:01:48\' AND recycle_bin.table_name = \'users\')',
+     'localTime' => '2023-03-27 08:11:11',
+  )),
+   'users' => 
+  stdClass::__set_state(array(
+     'table' => 'users',
+     'type' => 'GET',
+     'sql' => 'SELECT users.* FROM users WHERE users.modified_time >= \'2023-03-27 01:01:48\'  ORDER BY username ASC',
+     'countSql' => 'SELECT count(*) FROM users WHERE users.modified_time >= \'2023-03-27 01:01:48\'',
+     'localTime' => '2023-03-27 08:11:11',
+  )),
+))
+ DEBUG CalemPDOStatement - Query time:0.0004, the query=SELECT count(*) FROM sched_user , params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0005, the query=SELECT sched_user.* FROM sched_user   ORDER BY sched_date DESC  LIMIT 0, 40, params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0005, the query=SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= '2023-03-27 01:01:48' AND recycle_bin.table_name = 'users'), params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM users WHERE users.modified_time >= '2023-03-27 01:01:48', params=NULL
+ DEBUG CalemSoapRequest - Zip contents from 5450 to 1215
+ INFO  CalemSoapService - acceptedEncoding=gzip, deflate, br, Received a post request=<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"><soap:Header><format>js</format><CALEM_SID>0b9c4691-4464-e814-817f-3d7832d810bb</CALEM_SID></soap:Header><soap:Body><BulkFetch xmlns="urn:CalemosSoapService"><bulkfetch><training><table>training</table><type>GET</type><sql>SELECT training.* FROM training   ORDER BY start_time DESC  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM training </countSql><localTime>2023-03-27 08:12:10</localTime></training><training_course><table>training_course</table><type>GET</type><sql>SELECT training_course.* FROM training_course   ORDER BY course ASC</sql><countSql>SELECT count(*) FROM training_course </countSql><localTime>2023-03-27 08:12:10</localTime></training_course><recycle_bin_contact><table>contact</table><type>DELETED</type><sql>SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time &gt;= '2023-03-27 01:01:57' AND recycle_bin.table_name = 'contact')</sql><localTime>2023-03-27 08:12:10</localTime></recycle_bin_contact><contact><table>contact</table><type>GET</type><sql>SELECT contact.* FROM contact WHERE contact.modified_time &gt;= '2023-03-27 01:01:57'  ORDER BY full_name ASC</sql><countSql>SELECT count(*) FROM contact WHERE contact.modified_time &gt;= '2023-03-27 01:01:57'</countSql><localTime>2023-03-27 08:12:10</localTime></contact><training_certificate><table>training_certificate</table><type>GET</type><sql>SELECT training_certificate.* FROM training_certificate   ORDER BY certificate ASC</sql><countSql>SELECT count(*) FROM training_certificate </countSql><localTime>2023-03-27 08:12:10</localTime></training_certificate></bulkfetch></BulkFetch></soap:Body></soap:Envelope>
+ DEBUG CalemSoapService - reqHeader=2, params=1
+ INFO  MysqlHandler - calem db connection: user=admin, password=***, , connection=mysql:host=localhost;dbname=pheok_maintenance, persistent connection=Array
+ DEBUG CalemSoapRequest - Invoking the BulkFetch, param=stdClass::__set_state(array(
+   'training' => 
+  stdClass::__set_state(array(
+     'table' => 'training',
+     'type' => 'GET',
+     'sql' => 'SELECT training.* FROM training   ORDER BY start_time DESC  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM training ',
+     'localTime' => '2023-03-27 08:12:10',
+  )),
+   'training_course' => 
+  stdClass::__set_state(array(
+     'table' => 'training_course',
+     'type' => 'GET',
+     'sql' => 'SELECT training_course.* FROM training_course   ORDER BY course ASC',
+     'countSql' => 'SELECT count(*) FROM training_course ',
+     'localTime' => '2023-03-27 08:12:10',
+  )),
+   'recycle_bin_contact' => 
+  stdClass::__set_state(array(
+     'table' => 'contact',
+     'type' => 'DELETED',
+     'sql' => 'SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= \'2023-03-27 01:01:57\' AND recycle_bin.table_name = \'contact\')',
+     'localTime' => '2023-03-27 08:12:10',
+  )),
+   'contact' => 
+  stdClass::__set_state(array(
+     'table' => 'contact',
+     'type' => 'GET',
+     'sql' => 'SELECT contact.* FROM contact WHERE contact.modified_time >= \'2023-03-27 01:01:57\'  ORDER BY full_name ASC',
+     'countSql' => 'SELECT count(*) FROM contact WHERE contact.modified_time >= \'2023-03-27 01:01:57\'',
+     'localTime' => '2023-03-27 08:12:10',
+  )),
+   'training_certificate' => 
+  stdClass::__set_state(array(
+     'table' => 'training_certificate',
+     'type' => 'GET',
+     'sql' => 'SELECT training_certificate.* FROM training_certificate   ORDER BY certificate ASC',
+     'countSql' => 'SELECT count(*) FROM training_certificate ',
+     'localTime' => '2023-03-27 08:12:10',
+  )),
+))
+ DEBUG CalemPDOStatement - Query time:0.0099, the query=SELECT count(*) FROM training , params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0004, the query=SELECT count(*) FROM training_course , params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0002, the query=SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= '2023-03-27 01:01:57' AND recycle_bin.table_name = 'contact'), params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM contact WHERE contact.modified_time >= '2023-03-27 01:01:57', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0004, the query=SELECT count(*) FROM training_certificate , params=NULL
+ DEBUG CalemSoapRequest - Zip contents from 731 to 209
+ INFO  CalemSoapService - acceptedEncoding=gzip, deflate, br, Received a post request=<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"><soap:Header><format>js</format><CALEM_SID>0b9c4691-4464-e814-817f-3d7832d810bb</CALEM_SID></soap:Header><soap:Body><BulkFetch xmlns="urn:CalemosSoapService"><bulkfetch><inspection><table>inspection</table><type>GET</type><sql>SELECT inspection.* FROM inspection   ORDER BY start_time DESC  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM inspection </countSql><localTime>2023-03-27 08:12:11</localTime></inspection></bulkfetch></BulkFetch></soap:Body></soap:Envelope>
+ DEBUG CalemSoapService - reqHeader=2, params=1
+ INFO  MysqlHandler - calem db connection: user=admin, password=***, , connection=mysql:host=localhost;dbname=pheok_maintenance, persistent connection=Array
+ DEBUG CalemSoapRequest - Invoking the BulkFetch, param=stdClass::__set_state(array(
+   'inspection' => 
+  stdClass::__set_state(array(
+     'table' => 'inspection',
+     'type' => 'GET',
+     'sql' => 'SELECT inspection.* FROM inspection   ORDER BY start_time DESC  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM inspection ',
+     'localTime' => '2023-03-27 08:12:11',
+  )),
+))
+ DEBUG CalemPDOStatement - Query time:0.0006, the query=SELECT count(*) FROM inspection , params=NULL
+ DEBUG CalemSoapRequest - Zip contents from 165 to 140
+ INFO  CalemSoapService - acceptedEncoding=gzip, deflate, br, Received a post request=<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"><soap:Header><format>js</format><CALEM_SID>0b9c4691-4464-e814-817f-3d7832d810bb</CALEM_SID></soap:Header><soap:Body><BulkFetch xmlns="urn:CalemosSoapService"><bulkfetch><budget_title><table>budget_title</table><type>GET</type><sql>SELECT budget_title.* FROM budget_title   ORDER BY start_date DESC</sql><countSql>SELECT count(*) FROM budget_title </countSql><localTime>2023-03-27 08:12:12</localTime></budget_title></bulkfetch></BulkFetch></soap:Body></soap:Envelope>
+ DEBUG CalemSoapService - reqHeader=2, params=1
+ INFO  MysqlHandler - calem db connection: user=admin, password=***, , connection=mysql:host=localhost;dbname=pheok_maintenance, persistent connection=Array
+ DEBUG CalemSoapRequest - Invoking the BulkFetch, param=stdClass::__set_state(array(
+   'budget_title' => 
+  stdClass::__set_state(array(
+     'table' => 'budget_title',
+     'type' => 'GET',
+     'sql' => 'SELECT budget_title.* FROM budget_title   ORDER BY start_date DESC',
+     'countSql' => 'SELECT count(*) FROM budget_title ',
+     'localTime' => '2023-03-27 08:12:12',
+  )),
+))
+ DEBUG CalemPDOStatement - Query time:0.0008, the query=SELECT count(*) FROM budget_title , params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT budget_title.* FROM budget_title   ORDER BY start_date DESC, params=NULL
+ DEBUG CalemSoapRequest - Zip contents from 1118 to 504
+ INFO  CalemSoapService - acceptedEncoding=gzip, deflate, br, Received a post request=<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"><soap:Header><format>js</format><CALEM_SID>0b9c4691-4464-e814-817f-3d7832d810bb</CALEM_SID></soap:Header><soap:Body><BulkFetch xmlns="urn:CalemosSoapService"><bulkfetch><wo_planned_labor><table>wo_planned_labor</table><type>GET</type><sql>SELECT wo_planned_labor.* FROM wo_planned_labor WHERE wo_planned_labor.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'  ORDER BY craft_id ASC  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM wo_planned_labor WHERE wo_planned_labor.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'</countSql><localTime>2023-03-27 08:12:55</localTime></wo_planned_labor><recycle_bin_craft><table>craft</table><type>DELETED</type><sql>SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time &gt;= '2023-03-27 01:03:00' AND recycle_bin.table_name = 'craft')</sql><localTime>2023-03-27 08:12:55</localTime></recycle_bin_craft><craft><table>craft</table><type>GET</type><sql>SELECT craft.* FROM craft WHERE craft.modified_time &gt;= '2023-03-27 01:03:00'  ORDER BY craft ASC</sql><countSql>SELECT count(*) FROM craft WHERE craft.modified_time &gt;= '2023-03-27 01:03:00'</countSql><localTime>2023-03-27 08:12:55</localTime></craft><wo_planned_tool><table>wo_planned_tool</table><type>GET</type><sql>SELECT wo_planned_tool.* FROM wo_planned_tool WHERE wo_planned_tool.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'  ORDER BY in_id ASC  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM wo_planned_tool WHERE wo_planned_tool.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'</countSql><localTime>2023-03-27 08:12:55</localTime></wo_planned_tool><recycle_bin_inventory><table>inventory</table><type>DELETED</type><sql>SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time &gt;= '2023-03-27 01:01:48' AND recycle_bin.table_name = 'inventory')</sql><localTime>2023-03-27 08:12:55</localTime></recycle_bin_inventory><inventory><table>inventory</table><type>GET</type><sql>SELECT inventory.* FROM inventory WHERE inventory.modified_time &gt;= '2023-03-27 01:01:48'  ORDER BY in_no ASC</sql><countSql>SELECT count(*) FROM inventory WHERE inventory.modified_time &gt;= '2023-03-27 01:01:48'</countSql><localTime>2023-03-27 08:12:55</localTime></inventory><wo_planned_part><table>wo_planned_part</table><type>GET</type><sql>SELECT wo_planned_part.* FROM wo_planned_part WHERE wo_planned_part.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'  ORDER BY in_id ASC  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM wo_planned_part WHERE wo_planned_part.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'</countSql><localTime>2023-03-27 08:12:55</localTime></wo_planned_part><wo_planned_downtime><table>wo_planned_downtime</table><type>GET</type><sql>SELECT wo_planned_downtime.* , workorder_wo_id.wo_no AS wo_id__wo_no FROM wo_planned_downtime  LEFT JOIN workorder as workorder_wo_id ON wo_planned_downtime.wo_id=workorder_wo_id.id WHERE wo_planned_downtime.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM wo_planned_downtime WHERE wo_planned_downtime.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'</countSql><localTime>2023-03-27 08:12:55</localTime></wo_planned_downtime><wo_doc><table>wo_doc</table><type>GET</type><sql>SELECT wo_doc.* FROM wo_doc WHERE wo_doc.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'  ORDER BY seq ASC  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM wo_doc WHERE wo_doc.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'</countSql><localTime>2023-03-27 08:12:55</localTime></wo_doc><recycle_bin_document><table>document</table><type>DELETED</type><sql>SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time &gt;= '2023-03-27 01:01:48' AND recycle_bin.table_name = 'document')</sql><localTime>2023-03-27 08:12:55</localTime></recycle_bin_document><document><table>document</table><type>GET</type><sql>SELECT document.* FROM document WHERE document.modified_time &gt;= '2023-03-27 01:01:48'  ORDER BY document ASC</sql><countSql>SELECT count(*) FROM document WHERE document.modified_time &gt;= '2023-03-27 01:01:48'</countSql><localTime>2023-03-27 08:12:55</localTime></document><wo_meter><table>wo_meter</table><type>GET</type><sql>SELECT wo_meter.* , asset_meter_meter_id.meter_no AS meter_id__meter_no FROM wo_meter  LEFT JOIN asset_meter as asset_meter_meter_id ON wo_meter.meter_id=asset_meter_meter_id.id WHERE wo_meter.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'  ORDER BY meter_id__meter_no ASC  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM wo_meter WHERE wo_meter.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'</countSql><localTime>2023-03-27 08:12:55</localTime></wo_meter><wo_sched_labor><table>wo_sched_labor</table><type>GET</type><sql>SELECT wo_sched_labor.* , workorder_wo_id.wo_no AS wo_id__wo_no FROM wo_sched_labor  LEFT JOIN workorder as workorder_wo_id ON wo_sched_labor.wo_id=workorder_wo_id.id WHERE wo_sched_labor.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'  ORDER BY start_time DESC  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM wo_sched_labor WHERE wo_sched_labor.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'</countSql><localTime>2023-03-27 08:12:55</localTime></wo_sched_labor><wo_step><table>wo_step</table><type>GET</type><sql>SELECT wo_step.* FROM wo_step WHERE wo_step.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'  ORDER BY seq ASC  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM wo_step WHERE wo_step.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'</countSql><localTime>2023-03-27 08:12:55</localTime></wo_step><wo_safety><table>wo_safety</table><type>GET</type><sql>SELECT wo_safety.* FROM wo_safety WHERE wo_safety.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'  ORDER BY seq ASC  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM wo_safety WHERE wo_safety.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'</countSql><localTime>2023-03-27 08:12:55</localTime></wo_safety><wo_labor><table>wo_labor</table><type>GET</type><sql>SELECT wo_labor.* FROM wo_labor WHERE wo_labor.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'  ORDER BY start_time DESC  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM wo_labor WHERE wo_labor.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'</countSql><localTime>2023-03-27 08:12:55</localTime></wo_labor><wo_part><table>wo_part</table><type>GET</type><sql>SELECT wo_part.* FROM wo_part WHERE wo_part.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'  ORDER BY in_id ASC  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM wo_part WHERE wo_part.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'</countSql><localTime>2023-03-27 08:12:55</localTime></wo_part><wo_tool><table>wo_tool</table><type>GET</type><sql>SELECT wo_tool.* FROM wo_tool WHERE wo_tool.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'  ORDER BY in_id ASC  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM wo_tool WHERE wo_tool.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'</countSql><localTime>2023-03-27 08:12:55</localTime></wo_tool><asset_downtime><table>asset_downtime</table><type>GET</type><sql>SELECT asset_downtime.* , workorder_wo_id.wo_no AS wo_id__wo_no FROM asset_downtime  LEFT JOIN workorder as workorder_wo_id ON asset_downtime.wo_id=workorder_wo_id.id WHERE asset_downtime.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'  ORDER BY start_time DESC  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM asset_downtime WHERE asset_downtime.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'</countSql><localTime>2023-03-27 08:12:55</localTime></asset_downtime><recycle_bin_asset><table>asset</table><type>DELETED</type><sql>SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time &gt;= '2023-03-27 01:01:49' AND recycle_bin.table_name = 'asset')</sql><localTime>2023-03-27 08:12:55</localTime></recycle_bin_asset><asset><table>asset</table><type>GET</type><sql>SELECT asset.* FROM asset WHERE asset.modified_time &gt;= '2023-03-27 01:01:49'  ORDER BY asset_no ASC</sql><countSql>SELECT count(*) FROM asset WHERE asset.modified_time &gt;= '2023-03-27 01:01:49'</countSql><localTime>2023-03-27 08:12:55</localTime></asset><wo_comment><table>wo_comment</table><type>GET</type><sql>SELECT wo_comment.* , workorder_wo_id.wo_no AS wo_id__wo_no FROM wo_comment  LEFT JOIN workorder as workorder_wo_id ON wo_comment.wo_id=workorder_wo_id.id WHERE wo_comment.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'  ORDER BY modified_time DESC  LIMIT 0, 40</sql><countSql>SELECT count(*) FROM wo_comment WHERE wo_comment.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb'</countSql><localTime>2023-03-27 08:12:55</localTime></wo_comment></bulkfetch></BulkFetch></soap:Body></soap:Envelope>
+ DEBUG CalemSoapService - reqHeader=2, params=1
+ INFO  MysqlHandler - calem db connection: user=admin, password=***, , connection=mysql:host=localhost;dbname=pheok_maintenance, persistent connection=Array
+ DEBUG CalemSoapRequest - Invoking the BulkFetch, param=stdClass::__set_state(array(
+   'wo_planned_labor' => 
+  stdClass::__set_state(array(
+     'table' => 'wo_planned_labor',
+     'type' => 'GET',
+     'sql' => 'SELECT wo_planned_labor.* FROM wo_planned_labor WHERE wo_planned_labor.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'  ORDER BY craft_id ASC  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM wo_planned_labor WHERE wo_planned_labor.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'recycle_bin_craft' => 
+  stdClass::__set_state(array(
+     'table' => 'craft',
+     'type' => 'DELETED',
+     'sql' => 'SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= \'2023-03-27 01:03:00\' AND recycle_bin.table_name = \'craft\')',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'craft' => 
+  stdClass::__set_state(array(
+     'table' => 'craft',
+     'type' => 'GET',
+     'sql' => 'SELECT craft.* FROM craft WHERE craft.modified_time >= \'2023-03-27 01:03:00\'  ORDER BY craft ASC',
+     'countSql' => 'SELECT count(*) FROM craft WHERE craft.modified_time >= \'2023-03-27 01:03:00\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'wo_planned_tool' => 
+  stdClass::__set_state(array(
+     'table' => 'wo_planned_tool',
+     'type' => 'GET',
+     'sql' => 'SELECT wo_planned_tool.* FROM wo_planned_tool WHERE wo_planned_tool.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'  ORDER BY in_id ASC  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM wo_planned_tool WHERE wo_planned_tool.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'recycle_bin_inventory' => 
+  stdClass::__set_state(array(
+     'table' => 'inventory',
+     'type' => 'DELETED',
+     'sql' => 'SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= \'2023-03-27 01:01:48\' AND recycle_bin.table_name = \'inventory\')',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'inventory' => 
+  stdClass::__set_state(array(
+     'table' => 'inventory',
+     'type' => 'GET',
+     'sql' => 'SELECT inventory.* FROM inventory WHERE inventory.modified_time >= \'2023-03-27 01:01:48\'  ORDER BY in_no ASC',
+     'countSql' => 'SELECT count(*) FROM inventory WHERE inventory.modified_time >= \'2023-03-27 01:01:48\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'wo_planned_part' => 
+  stdClass::__set_state(array(
+     'table' => 'wo_planned_part',
+     'type' => 'GET',
+     'sql' => 'SELECT wo_planned_part.* FROM wo_planned_part WHERE wo_planned_part.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'  ORDER BY in_id ASC  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM wo_planned_part WHERE wo_planned_part.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'wo_planned_downtime' => 
+  stdClass::__set_state(array(
+     'table' => 'wo_planned_downtime',
+     'type' => 'GET',
+     'sql' => 'SELECT wo_planned_downtime.* , workorder_wo_id.wo_no AS wo_id__wo_no FROM wo_planned_downtime  LEFT JOIN workorder as workorder_wo_id ON wo_planned_downtime.wo_id=workorder_wo_id.id WHERE wo_planned_downtime.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM wo_planned_downtime WHERE wo_planned_downtime.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'wo_doc' => 
+  stdClass::__set_state(array(
+     'table' => 'wo_doc',
+     'type' => 'GET',
+     'sql' => 'SELECT wo_doc.* FROM wo_doc WHERE wo_doc.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'  ORDER BY seq ASC  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM wo_doc WHERE wo_doc.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'recycle_bin_document' => 
+  stdClass::__set_state(array(
+     'table' => 'document',
+     'type' => 'DELETED',
+     'sql' => 'SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= \'2023-03-27 01:01:48\' AND recycle_bin.table_name = \'document\')',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'document' => 
+  stdClass::__set_state(array(
+     'table' => 'document',
+     'type' => 'GET',
+     'sql' => 'SELECT document.* FROM document WHERE document.modified_time >= \'2023-03-27 01:01:48\'  ORDER BY document ASC',
+     'countSql' => 'SELECT count(*) FROM document WHERE document.modified_time >= \'2023-03-27 01:01:48\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'wo_meter' => 
+  stdClass::__set_state(array(
+     'table' => 'wo_meter',
+     'type' => 'GET',
+     'sql' => 'SELECT wo_meter.* , asset_meter_meter_id.meter_no AS meter_id__meter_no FROM wo_meter  LEFT JOIN asset_meter as asset_meter_meter_id ON wo_meter.meter_id=asset_meter_meter_id.id WHERE wo_meter.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'  ORDER BY meter_id__meter_no ASC  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM wo_meter WHERE wo_meter.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'wo_sched_labor' => 
+  stdClass::__set_state(array(
+     'table' => 'wo_sched_labor',
+     'type' => 'GET',
+     'sql' => 'SELECT wo_sched_labor.* , workorder_wo_id.wo_no AS wo_id__wo_no FROM wo_sched_labor  LEFT JOIN workorder as workorder_wo_id ON wo_sched_labor.wo_id=workorder_wo_id.id WHERE wo_sched_labor.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'  ORDER BY start_time DESC  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM wo_sched_labor WHERE wo_sched_labor.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'wo_step' => 
+  stdClass::__set_state(array(
+     'table' => 'wo_step',
+     'type' => 'GET',
+     'sql' => 'SELECT wo_step.* FROM wo_step WHERE wo_step.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'  ORDER BY seq ASC  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM wo_step WHERE wo_step.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'wo_safety' => 
+  stdClass::__set_state(array(
+     'table' => 'wo_safety',
+     'type' => 'GET',
+     'sql' => 'SELECT wo_safety.* FROM wo_safety WHERE wo_safety.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'  ORDER BY seq ASC  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM wo_safety WHERE wo_safety.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'wo_labor' => 
+  stdClass::__set_state(array(
+     'table' => 'wo_labor',
+     'type' => 'GET',
+     'sql' => 'SELECT wo_labor.* FROM wo_labor WHERE wo_labor.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'  ORDER BY start_time DESC  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM wo_labor WHERE wo_labor.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'wo_part' => 
+  stdClass::__set_state(array(
+     'table' => 'wo_part',
+     'type' => 'GET',
+     'sql' => 'SELECT wo_part.* FROM wo_part WHERE wo_part.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'  ORDER BY in_id ASC  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM wo_part WHERE wo_part.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'wo_tool' => 
+  stdClass::__set_state(array(
+     'table' => 'wo_tool',
+     'type' => 'GET',
+     'sql' => 'SELECT wo_tool.* FROM wo_tool WHERE wo_tool.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'  ORDER BY in_id ASC  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM wo_tool WHERE wo_tool.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'asset_downtime' => 
+  stdClass::__set_state(array(
+     'table' => 'asset_downtime',
+     'type' => 'GET',
+     'sql' => 'SELECT asset_downtime.* , workorder_wo_id.wo_no AS wo_id__wo_no FROM asset_downtime  LEFT JOIN workorder as workorder_wo_id ON asset_downtime.wo_id=workorder_wo_id.id WHERE asset_downtime.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'  ORDER BY start_time DESC  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM asset_downtime WHERE asset_downtime.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'recycle_bin_asset' => 
+  stdClass::__set_state(array(
+     'table' => 'asset',
+     'type' => 'DELETED',
+     'sql' => 'SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= \'2023-03-27 01:01:49\' AND recycle_bin.table_name = \'asset\')',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'asset' => 
+  stdClass::__set_state(array(
+     'table' => 'asset',
+     'type' => 'GET',
+     'sql' => 'SELECT asset.* FROM asset WHERE asset.modified_time >= \'2023-03-27 01:01:49\'  ORDER BY asset_no ASC',
+     'countSql' => 'SELECT count(*) FROM asset WHERE asset.modified_time >= \'2023-03-27 01:01:49\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+   'wo_comment' => 
+  stdClass::__set_state(array(
+     'table' => 'wo_comment',
+     'type' => 'GET',
+     'sql' => 'SELECT wo_comment.* , workorder_wo_id.wo_no AS wo_id__wo_no FROM wo_comment  LEFT JOIN workorder as workorder_wo_id ON wo_comment.wo_id=workorder_wo_id.id WHERE wo_comment.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'  ORDER BY modified_time DESC  LIMIT 0, 40',
+     'countSql' => 'SELECT count(*) FROM wo_comment WHERE wo_comment.wo_id = \'a1f09913-038c-ee64-f514-df26b89ed9cb\'',
+     'localTime' => '2023-03-27 08:12:55',
+  )),
+))
+ DEBUG CalemPDOStatement - Query time:0.0005, the query=SELECT count(*) FROM wo_planned_labor WHERE wo_planned_labor.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0002, the query=SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= '2023-03-27 01:03:00' AND recycle_bin.table_name = 'craft'), params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM craft WHERE craft.modified_time >= '2023-03-27 01:03:00', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM wo_planned_tool WHERE wo_planned_tool.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0002, the query=SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= '2023-03-27 01:01:48' AND recycle_bin.table_name = 'inventory'), params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM inventory WHERE inventory.modified_time >= '2023-03-27 01:01:48', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM wo_planned_part WHERE wo_planned_part.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM wo_planned_downtime WHERE wo_planned_downtime.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM wo_doc WHERE wo_doc.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0002, the query=SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= '2023-03-27 01:01:48' AND recycle_bin.table_name = 'document'), params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM document WHERE document.modified_time >= '2023-03-27 01:01:48', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM wo_meter WHERE wo_meter.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM wo_sched_labor WHERE wo_sched_labor.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM wo_step WHERE wo_step.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0004, the query=SELECT count(*) FROM wo_safety WHERE wo_safety.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM wo_labor WHERE wo_labor.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM wo_part WHERE wo_part.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM wo_tool WHERE wo_tool.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM asset_downtime WHERE asset_downtime.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0004, the query=SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= '2023-03-27 01:01:49' AND recycle_bin.table_name = 'asset'), params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0008, the query=SELECT count(*) FROM asset WHERE asset.modified_time >= '2023-03-27 01:01:49', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM wo_comment WHERE wo_comment.wo_id = 'a1f09913-038c-ee64-f514-df26b89ed9cb', params=NULL
+ DEBUG CalemSoapRequest - Zip contents from 3036 to 350
+ INFO  CalemSoapService - acceptedEncoding=gzip, deflate, br, Received a post request=<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"><soap:Header><format>js</format><CALEM_SID>0b9c4691-4464-e814-817f-3d7832d810bb</CALEM_SID></soap:Header><soap:Body><BulkFetch xmlns="urn:CalemosSoapService"><bulkfetch><recycle_bin_pm><table>pm</table><type>DELETED</type><sql>SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time &gt;= '2023-03-27 01:01:54' AND recycle_bin.table_name = 'pm')</sql><localTime>2023-03-27 08:13:00</localTime></recycle_bin_pm><pm><table>pm</table><type>GET</type><sql>SELECT pm.* , rcm_action_rcm_action_id.action AS rcm_action_id__action FROM pm  LEFT JOIN rcm_action as rcm_action_rcm_action_id ON pm.rcm_action_id=rcm_action_rcm_action_id.id WHERE pm.modified_time &gt;= '2023-03-27 01:01:54'  ORDER BY pm_no ASC</sql><countSql>SELECT count(*) FROM pm WHERE pm.modified_time &gt;= '2023-03-27 01:01:54'</countSql><localTime>2023-03-27 08:13:00</localTime></pm><recycle_bin_asset_type><table>asset_type</table><type>DELETED</type><sql>SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time &gt;= '2023-03-27 01:01:49' AND recycle_bin.table_name = 'asset_type')</sql><localTime>2023-03-27 08:13:00</localTime></recycle_bin_asset_type><asset_type><table>asset_type</table><type>GET</type><sql>SELECT asset_type.* FROM asset_type WHERE asset_type.modified_time &gt;= '2023-03-27 01:01:49'  ORDER BY type ASC</sql><countSql>SELECT count(*) FROM asset_type WHERE asset_type.modified_time &gt;= '2023-03-27 01:01:49'</countSql><localTime>2023-03-27 08:13:00</localTime></asset_type><recycle_bin_team><table>team</table><type>DELETED</type><sql>SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time &gt;= '2023-03-27 01:01:54' AND recycle_bin.table_name = 'team')</sql><localTime>2023-03-27 08:13:00</localTime></recycle_bin_team><team><table>team</table><type>GET</type><sql>SELECT team.* FROM team WHERE team.modified_time &gt;= '2023-03-27 01:01:54'  ORDER BY team ASC</sql><countSql>SELECT count(*) FROM team WHERE team.modified_time &gt;= '2023-03-27 01:01:54'</countSql><localTime>2023-03-27 08:13:00</localTime></team><recycle_bin_costcode><table>costcode</table><type>DELETED</type><sql>SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time &gt;= '2023-03-27 01:01:48' AND recycle_bin.table_name = 'costcode')</sql><localTime>2023-03-27 08:13:00</localTime></recycle_bin_costcode><costcode><table>costcode</table><type>GET</type><sql>SELECT costcode.* FROM costcode WHERE costcode.modified_time &gt;= '2023-03-27 01:01:48'  ORDER BY costcode ASC</sql><countSql>SELECT count(*) FROM costcode WHERE costcode.modified_time &gt;= '2023-03-27 01:01:48'</countSql><localTime>2023-03-27 08:13:00</localTime></costcode><recycle_bin_dept><table>dept</table><type>DELETED</type><sql>SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time &gt;= '2023-03-27 01:01:49' AND recycle_bin.table_name = 'dept')</sql><localTime>2023-03-27 08:13:00</localTime></recycle_bin_dept><dept><table>dept</table><type>GET</type><sql>SELECT dept.* FROM dept WHERE dept.modified_time &gt;= '2023-03-27 01:01:49'  ORDER BY dept ASC</sql><countSql>SELECT count(*) FROM dept WHERE dept.modified_time &gt;= '2023-03-27 01:01:49'</countSql><localTime>2023-03-27 08:13:00</localTime></dept><recycle_bin_project><table>project</table><type>DELETED</type><sql>SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time &gt;= '2023-03-27 01:02:13' AND recycle_bin.table_name = 'project')</sql><localTime>2023-03-27 08:13:00</localTime></recycle_bin_project><project><table>project</table><type>GET</type><sql>SELECT project.* FROM project WHERE project.modified_time &gt;= '2023-03-27 01:02:13'  ORDER BY sched_start_time ASC</sql><countSql>SELECT count(*) FROM project WHERE project.modified_time &gt;= '2023-03-27 01:02:13'</countSql><localTime>2023-03-27 08:13:00</localTime></project><project_type><table>project_type</table><type>GET</type><sql>SELECT project_type.* FROM project_type   ORDER BY type ASC</sql><countSql>SELECT count(*) FROM project_type </countSql><localTime>2023-03-27 08:13:00</localTime></project_type></bulkfetch></BulkFetch></soap:Body></soap:Envelope>
+ DEBUG CalemSoapService - reqHeader=2, params=1
+ INFO  MysqlHandler - calem db connection: user=admin, password=***, , connection=mysql:host=localhost;dbname=pheok_maintenance, persistent connection=Array
+ DEBUG CalemSoapRequest - Invoking the BulkFetch, param=stdClass::__set_state(array(
+   'recycle_bin_pm' => 
+  stdClass::__set_state(array(
+     'table' => 'pm',
+     'type' => 'DELETED',
+     'sql' => 'SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= \'2023-03-27 01:01:54\' AND recycle_bin.table_name = \'pm\')',
+     'localTime' => '2023-03-27 08:13:00',
+  )),
+   'pm' => 
+  stdClass::__set_state(array(
+     'table' => 'pm',
+     'type' => 'GET',
+     'sql' => 'SELECT pm.* , rcm_action_rcm_action_id.action AS rcm_action_id__action FROM pm  LEFT JOIN rcm_action as rcm_action_rcm_action_id ON pm.rcm_action_id=rcm_action_rcm_action_id.id WHERE pm.modified_time >= \'2023-03-27 01:01:54\'  ORDER BY pm_no ASC',
+     'countSql' => 'SELECT count(*) FROM pm WHERE pm.modified_time >= \'2023-03-27 01:01:54\'',
+     'localTime' => '2023-03-27 08:13:00',
+  )),
+   'recycle_bin_asset_type' => 
+  stdClass::__set_state(array(
+     'table' => 'asset_type',
+     'type' => 'DELETED',
+     'sql' => 'SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= \'2023-03-27 01:01:49\' AND recycle_bin.table_name = \'asset_type\')',
+     'localTime' => '2023-03-27 08:13:00',
+  )),
+   'asset_type' => 
+  stdClass::__set_state(array(
+     'table' => 'asset_type',
+     'type' => 'GET',
+     'sql' => 'SELECT asset_type.* FROM asset_type WHERE asset_type.modified_time >= \'2023-03-27 01:01:49\'  ORDER BY type ASC',
+     'countSql' => 'SELECT count(*) FROM asset_type WHERE asset_type.modified_time >= \'2023-03-27 01:01:49\'',
+     'localTime' => '2023-03-27 08:13:00',
+  )),
+   'recycle_bin_team' => 
+  stdClass::__set_state(array(
+     'table' => 'team',
+     'type' => 'DELETED',
+     'sql' => 'SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= \'2023-03-27 01:01:54\' AND recycle_bin.table_name = \'team\')',
+     'localTime' => '2023-03-27 08:13:00',
+  )),
+   'team' => 
+  stdClass::__set_state(array(
+     'table' => 'team',
+     'type' => 'GET',
+     'sql' => 'SELECT team.* FROM team WHERE team.modified_time >= \'2023-03-27 01:01:54\'  ORDER BY team ASC',
+     'countSql' => 'SELECT count(*) FROM team WHERE team.modified_time >= \'2023-03-27 01:01:54\'',
+     'localTime' => '2023-03-27 08:13:00',
+  )),
+   'recycle_bin_costcode' => 
+  stdClass::__set_state(array(
+     'table' => 'costcode',
+     'type' => 'DELETED',
+     'sql' => 'SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= \'2023-03-27 01:01:48\' AND recycle_bin.table_name = \'costcode\')',
+     'localTime' => '2023-03-27 08:13:00',
+  )),
+   'costcode' => 
+  stdClass::__set_state(array(
+     'table' => 'costcode',
+     'type' => 'GET',
+     'sql' => 'SELECT costcode.* FROM costcode WHERE costcode.modified_time >= \'2023-03-27 01:01:48\'  ORDER BY costcode ASC',
+     'countSql' => 'SELECT count(*) FROM costcode WHERE costcode.modified_time >= \'2023-03-27 01:01:48\'',
+     'localTime' => '2023-03-27 08:13:00',
+  )),
+   'recycle_bin_dept' => 
+  stdClass::__set_state(array(
+     'table' => 'dept',
+     'type' => 'DELETED',
+     'sql' => 'SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= \'2023-03-27 01:01:49\' AND recycle_bin.table_name = \'dept\')',
+     'localTime' => '2023-03-27 08:13:00',
+  )),
+   'dept' => 
+  stdClass::__set_state(array(
+     'table' => 'dept',
+     'type' => 'GET',
+     'sql' => 'SELECT dept.* FROM dept WHERE dept.modified_time >= \'2023-03-27 01:01:49\'  ORDER BY dept ASC',
+     'countSql' => 'SELECT count(*) FROM dept WHERE dept.modified_time >= \'2023-03-27 01:01:49\'',
+     'localTime' => '2023-03-27 08:13:00',
+  )),
+   'recycle_bin_project' => 
+  stdClass::__set_state(array(
+     'table' => 'project',
+     'type' => 'DELETED',
+     'sql' => 'SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= \'2023-03-27 01:02:13\' AND recycle_bin.table_name = \'project\')',
+     'localTime' => '2023-03-27 08:13:00',
+  )),
+   'project' => 
+  stdClass::__set_state(array(
+     'table' => 'project',
+     'type' => 'GET',
+     'sql' => 'SELECT project.* FROM project WHERE project.modified_time >= \'2023-03-27 01:02:13\'  ORDER BY sched_start_time ASC',
+     'countSql' => 'SELECT count(*) FROM project WHERE project.modified_time >= \'2023-03-27 01:02:13\'',
+     'localTime' => '2023-03-27 08:13:00',
+  )),
+   'project_type' => 
+  stdClass::__set_state(array(
+     'table' => 'project_type',
+     'type' => 'GET',
+     'sql' => 'SELECT project_type.* FROM project_type   ORDER BY type ASC',
+     'countSql' => 'SELECT count(*) FROM project_type ',
+     'localTime' => '2023-03-27 08:13:00',
+  )),
+))
+ DEBUG CalemPDOStatement - Query time:0.0004, the query=SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= '2023-03-27 01:01:54' AND recycle_bin.table_name = 'pm'), params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM pm WHERE pm.modified_time >= '2023-03-27 01:01:54', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0002, the query=SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= '2023-03-27 01:01:49' AND recycle_bin.table_name = 'asset_type'), params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM asset_type WHERE asset_type.modified_time >= '2023-03-27 01:01:49', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0002, the query=SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= '2023-03-27 01:01:54' AND recycle_bin.table_name = 'team'), params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM team WHERE team.modified_time >= '2023-03-27 01:01:54', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0002, the query=SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= '2023-03-27 01:01:48' AND recycle_bin.table_name = 'costcode'), params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM costcode WHERE costcode.modified_time >= '2023-03-27 01:01:48', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0002, the query=SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= '2023-03-27 01:01:49' AND recycle_bin.table_name = 'dept'), params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM dept WHERE dept.modified_time >= '2023-03-27 01:01:49', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0002, the query=SELECT recycle_bin.rec_id FROM recycle_bin WHERE (recycle_bin.created_time >= '2023-03-27 01:02:13' AND recycle_bin.table_name = 'project'), params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0003, the query=SELECT count(*) FROM project WHERE project.modified_time >= '2023-03-27 01:02:13', params=NULL
+ DEBUG CalemPDOStatement - Query time:0.0005, the query=SELECT count(*) FROM project_type , params=NULL
+ DEBUG CalemSoapRequest - Zip contents from 1737 to 250
